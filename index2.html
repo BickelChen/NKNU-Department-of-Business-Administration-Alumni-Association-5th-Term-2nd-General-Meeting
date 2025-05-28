@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>第五屆第二次系友會員大會</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft JhengHei", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #e1bee7, #b2ebf2, #ce93d8, #b3e5fc);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      padding: 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #7e57c2, #26c6da);
+      color: white;
+      padding: 30px 10px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    header h2 {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    .image-section {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 15px;
+      border: 3px solid #aaa;
+    }
+
+    .content {
+      line-height: 1.8;
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #6a1b9a;
+    }
+
+    .form-button {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .form-button a {
+      background: #5e35b1;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    .form-button a:hover {
+      background: #4527a0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* 留言板樣式 */
+    .comments-section {
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .comments-section h3 {
+      margin-bottom: 15px;
+      color: #6a1b9a;
+    }
+
+    .comment-input {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .comment-input input, .comment-input textarea {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .comment-input button {
+      width: fit-content;
+      padding: 10px 20px;
+      border: none;
+      background-color: #7e57c2;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .comment-input button:hover {
+      background-color: #5e35b1;
+    }
+
+    .comment-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .comment-list li {
+      background: #f3e5f5;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .comment-list li span {
+      font-weight: bold;
+      color: #4a148c;
+    }
+
+    /* 倒數計時器 */
+    #countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>第五屆第二次系友會員大會</h1>
+      <h2>國立高雄師範大學 事業經營學系系友會</h2>
+    </header>
+
+    <div class="image-section">
+      <img src="image1.jpg" alt="系友合照">
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+      <h3 style="color: #6a1b9a;">⏳ 活動倒數計時</h3>
+      <div id="countdown">載入中...</div>
+    </div>
+
+    <div class="content">
+      <p>各位親愛的 <span class="highlight">高師大事經系系友</span> 會員們，一年一度的會員大會即將召開，歡迎大家踴躍參與！</p>
+      <p><strong>📅 日期：</strong>2025 年 6 月 21 日（六）</p>
+      <p><strong>🕘 時間：</strong>09:30 報到｜10:00 正式開會</p>
+      <p><strong>📍 地點：</strong>事經系 E4313 教室</p>
+      <p><strong>⏰ 截止報名：</strong>114年 6 月 6 日（五）24:00</p>
+      <p>📝 現場參加者可獲得精美紀念品乙份！</p>
+    </div>
+
+    <div class="form-button">
+      <a href="https://forms.gle/Zcdnu3XN91U7oMAt8" target="_blank">📋 點我填寫報名表單</a>
+    </div>
+
+    <!-- 留言板區塊 -->
+    <div class="comments-section">
+      <h3>💬 留言板｜分享你對系友會的期待！</h3>
+      <div class="comment-input">
+        <input type="text" id="name" placeholder="你的名字">
+        <textarea id="message" placeholder="留言內容..." rows="3"></textarea>
+        <button onclick="postComment()">送出留言</button>
+      </div>
+      <ul class="comment-list" id="commentList"></ul>
+    </div>
+
+    <footer>
+      © 2025 高師大事經系系友會
+    </footer>
+  </div>
+
+  <script>
+    // 活動倒數計時
+    function updateCountdown() {
+      const eventDate = new Date("2025-06-21T09:30:00+08:00").getTime();
+      const now = new Date().getTime();
+      const gap = eventDate - now;
+      const countdownElement = document.getElementById("countdown");
+
+      if (gap > 0) {
+        const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+        countdownElement.innerHTML =
+          `${days} 天 ${hours} 小時 ${minutes} 分 ${seconds} 秒`;
+      } else {
+        countdownElement.innerHTML = "🎉 活動開始囉！";
+        countdownElement.style.color = "#388e3c";
+        clearInterval(countdownInterval);
+      }
+    }
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    // 留言板功能
+    function postComment() {
+      const name = document.getElementById("name").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const list = document.getElementById("commentList");
+
+      if (name && message) {
+        const newComment = document.createElement("li");
+        newComment.innerHTML = `<span>${name}</span>：${message}`;
+        list.prepend(newComment);
+        document.getElementById("name").value = "";
+        document.getElementById("message").value = "";
+      } else {
+        alert("請填寫名字與留言內容！");
+      }
+    }
+  </script>
+</body>
+</html>
